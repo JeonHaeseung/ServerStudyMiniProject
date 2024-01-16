@@ -1,9 +1,6 @@
 package ServerStudyMiniProject.ServerStudyMiniProject.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -20,11 +17,23 @@ public class Post {
 
     private String title;
     
-    private String thumbnail; //bucket에서 생성된 URL 저장
+    private String thumbnail; //S3 bucket에서 생성된 URL 저장
     
     private String body;
 
     private int likes;
 
+    @ManyToOne
+    @JoinColumn(name = "member_id") //외래키
+    private Member member;
+
+    /* 비즈니스 로직 */
+    public void addLikes(){
+        this.likes+=1;
+    }
+
+    public void deleteLikes(){
+        this.likes-=1;
+    }
 
 }
