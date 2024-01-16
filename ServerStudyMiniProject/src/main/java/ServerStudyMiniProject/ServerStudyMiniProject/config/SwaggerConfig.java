@@ -16,6 +16,8 @@ public class SwaggerConfig {
                 .description("GDSC의 미니 스프링 프로젝트 형 API 문서입니다.");
     }
 
+    /*OpenAPI 객체를 생성하여 API 문서의 전반적인 구성을 설정
+     * 앞서 설정한 Info 객체를 지정*/
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI()
