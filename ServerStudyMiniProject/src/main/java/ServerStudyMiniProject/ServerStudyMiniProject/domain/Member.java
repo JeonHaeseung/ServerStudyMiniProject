@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 public class Member {
@@ -23,13 +26,12 @@ public class Member {
     @Embedded
     private Address address;
 
-    @Enumerated(EnumType.STRING)
-    private Authority authority;
+    @OneToOne(mappedBy = "member") //외래키가 없으므로, Profile 클래스의 member 필드로 역참조
+    private Profile profile;
 
-    @Builder
-    public Member(String email, String password, Authority authority) {
-        this.email = email;
-        this.password = password;
-        this.authority = authority;
-    }
+    @OneToMany(mappedBy = "member") //외래키가 없으므로, Post 클래스의 member 필드로 역참조
+    private List<Post> posts = new ArrayList<>(); // Post 쪽이 다수이므로, List로 필드 만들기
+
+    @OneToMany(mappedBy = "member") //외래키가 없으므로, MemberCircle 클래스의 member 필드로 역참조
+    private List<MemberCircle> memberCircles = new ArrayList<>(); // MemberCircle 쪽이 다수이므로, List로 필드 만들기
 }
