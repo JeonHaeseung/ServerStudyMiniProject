@@ -1,5 +1,6 @@
 package ServerStudyMiniProject.ServerStudyMiniProject.auth.security;
 
+import ServerStudyMiniProject.ServerStudyMiniProject.auth.AuthDetailService;
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.MemberRepository;
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.jwt.JwtAuthenticationFilter;
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.jwt.JwtAuthorizationFilter;
@@ -26,6 +27,7 @@ import java.time.Duration;
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final MemberRepository memberRepository;
+    private final AuthDetailService authDetailService;
     private final AuthenticationConfiguration authenticationConfiguration;
     
     /* 회원가입: 패스워드 암호화를 위해 사용 */
@@ -73,7 +75,7 @@ public class SecurityConfig {
                 .httpBasic(httpBasic -> httpBasic.disable()) //HTTP 기본 인증을 비활성화->비밀번호를 평문으로 보내지 않음
                 .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //세션을 생성하지 않음->토큰 기반 인증 필요
                 .addFilter(new JwtAuthenticationFilter(authenticationManager(), jwtTokenProvider()))  //사용자 인증
-                .addFilter(new JwtAuthorizationFilter(authenticationManager(),  jwtTokenProvider(), principalDetailsService)) //사용자 권한 부여
+                .addFilter(new JwtAuthorizationFilter(authenticationManager(),  jwtTokenProvider(), authDetailService)) //사용자 권한 부여
                 .authorizeHttpRequests(request -> request
                         .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
                         .anyRequest().permitAll()	//개발 환경: 모든 종류의 요청에 인증 불필요
