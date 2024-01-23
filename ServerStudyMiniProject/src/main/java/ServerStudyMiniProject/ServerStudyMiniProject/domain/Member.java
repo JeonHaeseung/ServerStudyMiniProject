@@ -47,6 +47,7 @@ public class Member {
     @OneToMany(mappedBy = "member") //외래키가 없으므로, MemberCircle 클래스의 member 필드로 역참조
     private List<MemberCircle> memberCircles = new ArrayList<>(); // MemberCircle 쪽이 다수이므로, List로 필드 만들기
 
+    @Builder
     public Member(String email, String password, int age, String name, MemberRole memberRole, Address address){
         this.email = email;
         this.password = password;
