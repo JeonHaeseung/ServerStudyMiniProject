@@ -16,7 +16,7 @@ public class Circle {
 
     private String name;
 
-    private String desc;
+    private String description;
 
     @OneToMany(mappedBy = "circle") //외래키가 없으므로, MemberCircle 클래스의 member 필드로 역참조
     private List<MemberCircle> memberCircles = new ArrayList<>(); // MemberCircle 쪽이 다수이므로, List로 필드 만들기
