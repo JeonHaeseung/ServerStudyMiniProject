@@ -12,6 +12,6 @@ public enum MemberRole {
     private String role;
 
     MemberRole(String role) {
-        this.role = role;
+        this.role=role;
     }
 }
