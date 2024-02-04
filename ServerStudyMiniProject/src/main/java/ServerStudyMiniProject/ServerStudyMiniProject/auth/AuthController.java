@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class AuthController {
     private final AuthService authService;
-    @PostMapping("/register")
+    @PostMapping("/signup")
     @Operation(summary = "회원가입 API", description = "사용자의 이메일과 비밀번호로 회원가입하는 API 입니다.")
     public CommonResponse<?> userRegister(@RequestBody RegisterRequestDto registerRequestDto) {
         String registerMessage = authService.registerMember(registerRequestDto);
