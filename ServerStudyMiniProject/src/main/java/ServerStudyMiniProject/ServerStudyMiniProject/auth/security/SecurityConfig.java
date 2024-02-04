@@ -54,11 +54,14 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.addAllowedOrigin("http://localhost:8080"); //주의! 나중에 FE의 도메인 추가
+        configuration.addAllowedOrigin("http://localhost:3000");
+        configuration.addAllowedOrigin("http://localhost:8080");
         configuration.addAllowedMethod("*"); //모든 Method 허용(POST, GET, ...)
         configuration.addAllowedHeader("*"); //모든 Header 허용
         configuration.setMaxAge(Duration.ofSeconds(3600)); //브라우저가 응답을 캐싱해도 되는 시간(1시간)
         configuration.setAllowCredentials(true); //CORS 요청에서 자격 증명(쿠키, HTTP 헤더) 허용
+        configuration.addExposedHeader("Authorization"); // 클라이언트가 특정 헤더값에 접근 가능하도록 하기
+        configuration.addExposedHeader("Authorization-Refresh");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 
         source.registerCorsConfiguration("/**", configuration); //위에서 설정한 Configuration 적용
