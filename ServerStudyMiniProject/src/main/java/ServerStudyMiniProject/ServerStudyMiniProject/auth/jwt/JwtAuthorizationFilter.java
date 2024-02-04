@@ -33,22 +33,23 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         /* 헤더 추출 및 정상적인 헤더인지 확인 */
-        String jwtHeader = request.getHeader("X-ACCESS-TOKEN");
+        String jwtHeader = request.getHeader("Authorization");
         if (jwtHeader == null || !jwtHeader.startsWith("Bearer ")) {
             chain.doFilter(request, response);
             return;
         }
 
         /* 헤더 안의 JWT 토큰을 검증해 정상적인 사용자인지 확인 */
-        String jwtToken = request.getHeader("X-ACCESS-TOKEN").replace("Bearer ","");
+        String jwtToken = jwtHeader.substring(7);
         Member tokenMember = jwtTokenProvider.validJwtToken(jwtToken);
+
         if(tokenMember != null){ //토큰이 정상일 경우
             AuthDetails authDetails = new AuthDetails(tokenMember);
 
             /* JWT 토큰 서명이 정상이면 Authentication 객체 생성 */
             Authentication authentication = new UsernamePasswordAuthenticationToken(authDetails, null, authDetails.getAuthorities());
 
-            /* 시큐리티 세션에 Authentcation 을 저장 */
+            /* 시큐리티 세션에 Authentication 을 저장 */
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
         chain.doFilter(request, response);
