@@ -13,7 +13,7 @@ public class AuthDetailService implements UserDetailsService {
 
     @Override
     public AuthDetails loadUserByUsername(String email) {
-        Member member = memberRepository.findByEmail(email);
+        Member member = memberRepository.findMemberByEmail(email);
         return new AuthDetails(member);
     }
 }
