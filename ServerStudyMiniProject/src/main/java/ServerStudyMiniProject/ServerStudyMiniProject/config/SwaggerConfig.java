@@ -13,7 +13,7 @@ public class SwaggerConfig {
         return new Info()
                 .title("GDSC Mini Project")
                 .version("0.0.1")
-                .description("GDSC의 미니 스프링 프로젝트 형 API 문서입니다.");
+                .description("GDSC의 미니 스프링 프로젝트 API 문서입니다.");
     }
 
     /*OpenAPI 객체를 생성하여 API 문서의 전반적인 구성을 설정
