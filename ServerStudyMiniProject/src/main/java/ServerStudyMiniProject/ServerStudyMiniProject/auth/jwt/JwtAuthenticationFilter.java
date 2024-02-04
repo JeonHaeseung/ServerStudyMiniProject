@@ -50,11 +50,14 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
 
+        /* AuthDetails를 통해서 사용자의 인증을 추출하기 */
         AuthDetails authDetails = (AuthDetails) authResult.getPrincipal();
 
+        /* 토큰에 넣어주어야 하는 값인 id와 email 추출 */
         Long id = authDetails.getMember().getId();
         String email = authDetails.getMember().getEmail();
 
+        /* jwtTokenProvider를 통해 JWT 토큰을 발급 */
         String jwtToken = jwtTokenProvider.generateJwtToken(id, email);
 
         /* 가장 흔한 방식인 Bearer Token을 사용 */
