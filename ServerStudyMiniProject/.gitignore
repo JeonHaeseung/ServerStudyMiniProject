@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### GCP Key File ###
+solution-challenge-412104-328059455d14.json
