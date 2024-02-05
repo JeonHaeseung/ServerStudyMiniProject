@@ -1,6 +1,6 @@
 package ServerStudyMiniProject.ServerStudyMiniProject.auth.jwt;
 import ServerStudyMiniProject.ServerStudyMiniProject.domain.Member;
-import ServerStudyMiniProject.ServerStudyMiniProject.auth.MemberRepository;
+import ServerStudyMiniProject.ServerStudyMiniProject.member.MemberRepository;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

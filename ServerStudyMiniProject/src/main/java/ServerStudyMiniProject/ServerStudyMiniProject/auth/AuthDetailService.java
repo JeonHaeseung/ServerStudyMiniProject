@@ -1,6 +1,7 @@
 package ServerStudyMiniProject.ServerStudyMiniProject.auth;
 
 import ServerStudyMiniProject.ServerStudyMiniProject.domain.Member;
+import ServerStudyMiniProject.ServerStudyMiniProject.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package ServerStudyMiniProject.ServerStudyMiniProject.auth;
+package ServerStudyMiniProject.ServerStudyMiniProject.member;
 
 import ServerStudyMiniProject.ServerStudyMiniProject.domain.Member;
 import io.swagger.v3.oas.annotations.Operation;

@@ -1,7 +1,7 @@
 package ServerStudyMiniProject.ServerStudyMiniProject.auth.security;
 
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.AuthDetailService;
-import ServerStudyMiniProject.ServerStudyMiniProject.auth.MemberRepository;
+import ServerStudyMiniProject.ServerStudyMiniProject.member.MemberRepository;
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.jwt.JwtAuthenticationFilter;
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.jwt.JwtAuthorizationFilter;
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.jwt.JwtTokenProvider;

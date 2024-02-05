@@ -1,4 +1,4 @@
-package ServerStudyMiniProject.ServerStudyMiniProject.auth;
+package ServerStudyMiniProject.ServerStudyMiniProject.member;
 
 import ServerStudyMiniProject.ServerStudyMiniProject.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,5 +10,4 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
     // 특정 맴버 이메일로 맴버 엔티티 반환
     Member findMemberByEmail(String email);
-
 }

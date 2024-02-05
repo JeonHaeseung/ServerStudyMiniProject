@@ -5,6 +5,7 @@ import ServerStudyMiniProject.ServerStudyMiniProject.auth.dto.RegisterRequestDto
 import ServerStudyMiniProject.ServerStudyMiniProject.auth.jwt.JwtTokenProvider;
 import ServerStudyMiniProject.ServerStudyMiniProject.domain.Address;
 import ServerStudyMiniProject.ServerStudyMiniProject.domain.Member;
+import ServerStudyMiniProject.ServerStudyMiniProject.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
