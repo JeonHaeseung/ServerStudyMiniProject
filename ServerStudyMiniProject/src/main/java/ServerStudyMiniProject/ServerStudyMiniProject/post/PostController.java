@@ -1,7 +1,6 @@
 package ServerStudyMiniProject.ServerStudyMiniProject.post;
 
 import ServerStudyMiniProject.ServerStudyMiniProject.domain.Post;
-import ServerStudyMiniProject.ServerStudyMiniProject.post.dto.PostDeleteRequestDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
