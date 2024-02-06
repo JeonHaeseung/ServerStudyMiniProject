@@ -8,26 +8,22 @@ springdoc:
     disable-swagger-default-url: true
     display-request-duration: true
     operations-sorter: alpha
-# RDS
 spring:
+  # GCP Cloud SQL
   datasource:
-    url: jdbc:mysql://[RDS endpoint]:3306/[DB name]
-    username: admin
-    password: # [RDS password]
+    url: jdbc:mysql://[Cloud SQL Public IP]:3306/[Database Name]?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root  # default
+    password: [Instance password]
     driver-class-name: com.mysql.cj.jdbc.Driver
   # hibernate
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.MySQL8Dialect
-# S3
-cloud:
-  aws:
-    s3:
-      bucket: # [Bucket-Name]
-    stack.auto: false
-    region.static: ap-northeast-2
-    credentials:
-      access-key: # [Access-Key]
-      secret-key: # [Secret-key]
+# GCP Cloud Storage
+storage:
+  bucket: [Cloud Storage Bucket Name]
+  project-id: [GCP Project ID]
+# JWT
+jwt:
+  secret: # 랜덤하고 복잡한 값으로 설정-예시) AGalrgn@Tglknagf#TnvanglttlnagGlntl
