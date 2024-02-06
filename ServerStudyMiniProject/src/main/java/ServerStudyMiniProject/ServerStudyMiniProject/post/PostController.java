@@ -17,11 +17,22 @@ import java.util.List;
 public class PostController {
     private final PostService postService;
     private final PostRepository postRepository;
+
+    /* 무한 순환 문제가 발생 */
+    /*
     @GetMapping("")
     @Operation(summary = "포스트 조회 API", description = "모든 포스트를 조회하는 API 입니다.")
     public ResponseEntity<?> getAllPosts() {
         List<Post> posts = postRepository.findAll();
         return new ResponseEntity<>(posts, HttpStatusCode.valueOf(200));
+    }
+     */
+
+    @GetMapping("")
+    @Operation(summary = "포스트 조회 API", description = "모든 포스트를 조회하는 API 입니다.")
+    public ResponseEntity<?> getAllPosts() {
+        PostListResponseDto allPosts = postService.findAllPosts();
+        return new ResponseEntity<>(allPosts, HttpStatusCode.valueOf(200));
     }
 
     @DeleteMapping("")
