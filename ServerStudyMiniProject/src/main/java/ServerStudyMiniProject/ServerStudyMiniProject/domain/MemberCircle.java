@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 public class MemberCircle {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_circle_id")
     private Long id;
 

@@ -18,7 +18,7 @@ import java.util.Objects;
 @NoArgsConstructor
 public class Member {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="member_id")
     private Long id;
 

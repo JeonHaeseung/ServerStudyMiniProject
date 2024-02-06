@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Circle {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="circle_id")
     private Long id;
 
