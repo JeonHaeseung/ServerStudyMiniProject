@@ -1,6 +1,7 @@
 package ServerStudyMiniProject.ServerStudyMiniProject.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -34,6 +35,15 @@ public class Post {
 
     public void deleteLikes(){
         this.likes-=1;
+    }
+
+    @Builder
+    public Post(LocalDateTime postDate, String title, String thumbnail, String body, int likes){
+        this.postDate = postDate;
+        this.title = title;
+        this.thumbnail = thumbnail;
+        this.body = body;
+        this.likes = likes;
     }
 
 }
