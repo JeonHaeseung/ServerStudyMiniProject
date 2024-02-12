@@ -1,4 +1,6 @@
 # 🌱 Springboot Mini Project
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FJeonHaeseung%2FServerStudyMiniProject&count_bg=%23004529&title_bg=%2334A853&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false"/></a>
+
 <img width="2500" alt="benner" src="https://github.com/JeonHaeseung/ServerStudyMiniProject/assets/89632139/e9c38d1c-f22c-4f67-943f-5672d093d6cf">
 <p>GDSC Ewha 5기 Server 파트 스터디의 미니 프로젝트를 위한 실습용 리포지토리입니다. GDSC Ewha의 더 많은 활동을 보고 싶다면 아래 링크에서 팀 블로그를 참고해주세요.</p>
 
