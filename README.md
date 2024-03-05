@@ -23,4 +23,5 @@
 
 <p>더 자세한 설명은 아래 링크에서 참고해주세요.</p>
 
-<a href="https://cn-c.tistory.com/category/%F0%9F%97%84%EF%B8%8FBackend/%5BSpringBoot%5D%20%EB%8B%A8%EA%B8%B0%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"><img src="https://img.shields.io/badge/Springboot%20Mini%20Project%20Tistory-346450?style=for-the-badge&logo=tistory&logoColor=white"/></a>
+<a href="https://cn-c.tistory.com/category/%F0%9F%97%84%EF%B8%8FBackend/%5BGDSC%5D%20SpringBoot%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">
+<img src="https://img.shields.io/badge/Springboot%20Mini%20Project%20Tistory-346450?style=for-the-badge&logo=tistory&logoColor=white"/></a>
