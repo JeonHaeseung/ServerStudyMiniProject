@@ -1,5 +1,5 @@
 # 🌱 Springboot Mini Project
-<img width="2500" alt="benner" src="https://github.com/JeonHaeseung/ServerStudyMiniProject/assets/89632139/e9c38d1c-f22c-4f67-943f-5672d093d6cf">
+<img width="2500" height="1500" alt="benner" src="https://github.com/user-attachments/assets/3a6da0ac-62a4-4440-84e9-d0806449647f" />
 <p>GDSC Ewha 5기 Server 파트 스터디의 미니 프로젝트를 위한 실습용 리포지토리입니다. GDSC Ewha의 더 많은 활동을 보고 싶다면 아래 링크에서 팀 블로그를 참고해주세요.</p>
 
 <a href="https://gdscewha.tistory.com/"><img src="https://img.shields.io/badge/GDSC%20Ewha%20Team%20Blog-346450?style=for-the-badge&logo=tistory&logoColor=white"/></a>
